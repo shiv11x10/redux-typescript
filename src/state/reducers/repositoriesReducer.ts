@@ -12,9 +12,15 @@ interface RepositoriesState {
 //   payload?: any;
 // }
 
+const initialState = {
+  loading: false,
+  error: null,
+  data: [],
+};
+
 // Adding a return type annotation will ensure that return is consistent for all cases
 const reducer = (
-  state: RepositoriesState,
+  state: RepositoriesState = initialState,
   action: Action
 ): RepositoriesState => {
   switch (action.type) {
